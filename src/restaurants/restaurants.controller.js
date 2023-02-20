@@ -57,8 +57,7 @@ async function update(req, res, next) {
 }
 
 async function destroy(req, res, next) {
-  restaurantsService
-  .delete(res.locals.restaurant.restaurant_id)
+  restaurantsService.delete(res.locals.restaurant.restaurant_id)
   .then(()=> res.sendStatus(204))
   .catch(next);
 }
